@@ -65,10 +65,8 @@ begin
   // Executa a requisição
   FRESTRequest.Execute;
 
+  // Só pra mostrar a URL
   FRESTRequest.GetFullRequestURL();
-
-  // Recebe o retorno em JSON e o atribui ao objeto FJSON
-  FJSON.Parse(TEncoding.ASCII.GetBytes(FRESTResponse.JSONValue.ToString), 0);
 end;
 
 procedure TfrmPrincipal.InicializarObjetos;
