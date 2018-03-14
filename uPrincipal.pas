@@ -60,8 +60,6 @@ end;
 
 procedure TfrmPrincipal.EnviarRequisicao;
 begin
-  // Configura os parâmetros da requisição
-  // aqui pratim eu digo qual recurso eu quero consumir da minha API Rest, no caso ai o recurso 'coletores'
   FRESTRequest.Resource := 'coletores';
 
   // Executa a requisição
@@ -75,12 +73,8 @@ end;
 
 procedure TfrmPrincipal.InicializarObjetos;
 begin
-  // Cria o objeto da classe TRESTClient
-  // aqui pratim é a URL principal da API Rest
   FRESTClient := TRESTClient.Create('192.168.0.154:8081/');
 
-  // Pratim aqui é um tipo de autorização basic do HTTP tem outros tipos de autenticação como o JWT que é baseado em tokens, depois estuda sobre "oauth2"
-  // Tem que ver se a API que tu vai consumir precisar de autenticação se não precisar não precisa dessa linha
   FRESTClient.Authenticator := HTTPBasicAuthenticator;
 
   // Cria o objeto da classe TRESTResponse
@@ -90,8 +84,7 @@ begin
   FRESTRequest := TRESTRequest.Create(nil);
   FRESTRequest.Client := FRESTClient;
   FRESTRequest.Response := FRESTResponse;
-  // aqui prato é o método que vai executar POST, GET, PUT, DELETE no caso ele vai usar o GET
-  // estuda sobre os verbos HTTP
+
   FRESTRequest.Method := rmGET;
 
   // Cria o objeto para manipular o JSON

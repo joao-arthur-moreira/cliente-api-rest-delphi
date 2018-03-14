@@ -47,8 +47,8 @@ object frmPrincipal: TfrmPrincipal
     Top = 128
   end
   object HTTPBasicAuthenticator: THTTPBasicAuthenticator
-    Username = 'ti3'
-    Password = 'adm1981'
+    Username = 'usuario'
+    Password = 'senha'
     Left = 320
     Top = 8
   end
