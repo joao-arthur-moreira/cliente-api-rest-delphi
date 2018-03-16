@@ -91,6 +91,15 @@ object frmPrincipal: TfrmPrincipal
     Height = 148
     TabOrder = 7
   end
+  object Button1: TButton
+    Left = 200
+    Top = 337
+    Width = 169
+    Height = 25
+    Caption = 'Lista JSON'
+    TabOrder = 8
+    OnClick = Button1Click
+  end
   object ClientDataSet: TClientDataSet
     Aggregates = <>
     Params = <>
